@@ -7,14 +7,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-<<<<<<< HEAD
-  plugins: [react(), tailwindcss()
-=======
   plugins: [
     react(), 
     tailwindcss()
     // The usage here remains the same, calling the imported function
 
->>>>>>> 5f737447316f39d80edf990ed6829c9b1bb3444b
   ],
 })
