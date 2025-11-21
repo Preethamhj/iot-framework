@@ -16,7 +16,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/analytics" element={<Analytics />} />
+            
             <Route path="/battery" element={<BatteryManagement />} />
             <Route path="/firmware" element={<Firmware />} />
             <Route path="/digital-twin" element={<Digitaltwinmonitor />} />

@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
-    { path: '/analytics', label: 'Analytics', icon: Activity },
+  
     { path: '/battery', label: 'Battery', icon: Battery },
     { path: '/firmware', label: 'Firmware', icon: Radio },
     { path: '/digital-twin', label: 'Digital Twin', icon: Users },
