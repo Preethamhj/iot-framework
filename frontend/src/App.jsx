@@ -1,61 +1,31 @@
-import { useState } from "react";
-import { Menu, Home, Settings, BarChart2, Bell } from "lucide-react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Dashboard from './pages/Dashboard';
+import Analytics from './pages/Analytics';
+import BatteryManagement from './pages/BatteryManagement';
+import Firmware from './pages/Firmware';
+import Digitaltwinmonitor from './pages/Digitaltwinmonitor';
+import Securecenter from './pages/Securecenter';
+import { ThemeProvider } from './context/ThemeContext';
 
-export default function Dashboard() {
-  const [open, setOpen] = useState(true);
-
+function App() {
   return (
-    <div className="flex h-screen bg-gray-100">
-      {/* Sidebar */}
-      <aside className={`bg-white shadow-xl h-full p-4 transition-all duration-300 ${open ? "w-64" : "w-20"}`}>
-        <button onClick={() => setOpen(!open)} className="mb-6">
-          <Menu />
-        </button>
-
-        <ul className="space-y-4">
-          <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
-            <Home /> {open && <span>Dashboard</span>}
-          </li>
-          <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
-            <BarChart2 /> {open && <span>Analytics</span>}
-          </li>
-          <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
-            <Bell /> {open && <span>Notifications</span>}
-          </li>
-          <li className="flex items-center gap-3 cursor-pointer hover:text-blue-600">
-            <Settings /> {open && <span>Settings</span>}
-          </li>
-        </ul>
-      </aside>
-
-      {/* Main Content */}
-      <main className="flex-1 p-6 overflow-auto">
-        <h1 className="text-3xl font-bold mb-6">Dashboard Overview</h1>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Users</h2>
-            <p className="text-3xl font-bold">1,248</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Revenue</h2>
-            <p className="text-3xl font-bold">$8,920</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow-md">
-            <h2 className="text-xl font-semibold mb-2">Active Devices</h2>
-            <p className="text-3xl font-bold">432</p>
-          </div>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/battery" element={<BatteryManagement />} />
+            <Route path="/firmware" element={<Firmware />} />
+            <Route path="/digital-twin" element={<Digitaltwinmonitor />} />
+            <Route path="/security" element={<Securecenter />} />
+          </Routes>
         </div>
-
-        <div className="mt-10 bg-white p-6 rounded-2xl shadow-md">
-          <h2 className="text-xl font-semibold mb-4">Activity Chart</h2>
-          <div className="h-64 flex items-center justify-center text-gray-500">
-            Chart Placeholder
-          </div>
-        </div>
-      </main>
-    </div>
+      </Router>
+    </ThemeProvider>
   );
 }
+
+export default App;
