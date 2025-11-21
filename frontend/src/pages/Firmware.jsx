@@ -5,20 +5,20 @@ import { useTheme } from '../context/ThemeContext';
 const MonacoArduinoEditor = ({ initialCode }) => {
   const editorRef = useRef(null);
   const containerRef = useRef(null);
-  const [monacoInstance, setMonacoInstance] = useState(null);
   const [model, setModel] = useState(null);
   const [logs, setLogs] = useState('');
-  const [isChecking, setIsChecking] = useState(false);
+  const [uploadedPayload, setUploadedPayload] = useState(null);
 
   const { isDarkMode } = useTheme();
 
-  /** Auto apply dark/light theme */
+  /** Auto theme */
   useEffect(() => {
     if (monaco && editorRef.current) {
       monaco.editor.setTheme(isDarkMode ? "vs-dark" : "vs-light");
     }
   }, [isDarkMode]);
 
+  /** Init Monaco */
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -32,7 +32,7 @@ void setup() {
 
 void loop() {
   Serial.println("hello");
-  delay(1000)
+  delay(1000);
 }
 `,
       "cpp"
@@ -49,7 +49,6 @@ void loop() {
 
     editorRef.current = editor;
     setModel(createdModel);
-    setMonacoInstance(monaco);
 
     return () => {
       createdModel.dispose();
@@ -57,166 +56,68 @@ void loop() {
     };
   }, []);
 
-  /** Severity map */
-  function mapSeverity(s) {
-    if (s === 1) return monaco.MarkerSeverity.Error;
-    if (s === 2) return monaco.MarkerSeverity.Warning;
-    return monaco.MarkerSeverity.Info;
-  }
-
-  /** Fallback parser */
-  function parseGccOutputToMarkers(output) {
-    const markers = [];
-    const lines = output.split("\n");
-    const re = /(?:[^:\n]+):(\d+):(\d+):\s*(error|warning|note):\s*(.*)$/i;
-
-    for (const l of lines) {
-      const m = l.match(re);
-      if (m) {
-        const line = parseInt(m[1]) - 1;
-        const col = parseInt(m[2]);
-        const sev = /error/i.test(m[3]) ? 1 : /warning/i.test(m[3]) ? 2 : 3;
-
-        markers.push({
-          startLineNumber: line + 1,
-          startColumn: col,
-          endLineNumber: line + 1,
-          endColumn: col + 1,
-          message: m[4],
-          severity: mapSeverity(sev),
-        });
-      }
-    }
-    return markers;
-  }
-
-  /** Syntax check button */
-  async function checkDiagnostics() {
+  /** ---- Upload (Save only) ---- */
+  const handleUpload = () => {
     if (!model) return;
-    setIsChecking(true);
-    setLogs("Checking...");
 
     const code = model.getValue();
 
-    try {
-      const resp = await fetch("/api/diagnostics", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code, language: "arduino" }),
-      });
-
-      if (!resp.ok) {
-        const txt = await resp.text();
-        setLogs(`Diagnostics API returned ${resp.status}: ${txt}`);
-      } else {
-        const j = await resp.json();
-
-        if (j && Array.isArray(j.errors)) {
-          const markers = j.errors.map((e) => ({
-            startLineNumber: e.line,
-            startColumn: e.column || 1,
-            endLineNumber: e.line,
-            endColumn: (e.column || 1) + (e.length || 1),
-            message: e.message,
-            severity: mapSeverity(e.severity || 1),
-          }));
-
-          monaco.editor.setModelMarkers(model, "arduino-diagnostics", markers);
-          setLogs(`Found ${markers.length} problems (from backend).`);
-          setIsChecking(false);
-          return;
-        }
-      }
-    } catch (err) {
-      setLogs("Backend diagnostics failed: " + err.message);
-    }
-
-    /** fallback simple parsing */
-    const fallbackMarkers = [];
-    const srcLines = code.split("\n");
-
-    for (let i = 0; i < srcLines.length; i++) {
-      const trimmed = srcLines[i].trim();
-      if (!trimmed) continue;
-
-      if (
-        /\)\s*$/.test(trimmed) ||
-        /\bSerial\.print/.test(trimmed) ||
-        /\bdelay\s*\(/.test(trimmed)
-      ) {
-        if (!/[;{}]$/.test(trimmed)) {
-          fallbackMarkers.push({
-            startLineNumber: i + 1,
-            startColumn: 1,
-            endLineNumber: i + 1,
-            endColumn: srcLines[i].length,
-            message: "Possible missing semicolon",
-            severity: monaco.MarkerSeverity.Error,
-          });
-        }
-      }
-    }
-
-    monaco.editor.setModelMarkers(model, "arduino-diagnostics", fallbackMarkers);
-    setLogs(`Fallback found ${fallbackMarkers.length} issues.`);
-    setIsChecking(false);
-  }
-
-  function clearDiagnostics() {
-    if (model) {
-      monaco.editor.setModelMarkers(model, "arduino-diagnostics", []);
-      setLogs("Cleared diagnostics.");
-    }
-  }
-
-  /** File Upload Handler */
-  function handleFileUpload(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-
-    reader.onload = (event) => {
-      const text = event.target.result;
-      model.setValue(text);
-      setLogs(`Loaded file: ${file.name}`);
+    const wrapped = {
+      payload: code
     };
 
-    reader.readAsText(file);
-  }
+    setUploadedPayload(wrapped);
+    setLogs("Payload saved. Ready to compile.\n");
+  };
+
+  /** ---- Compile (Send to backend) ---- */
+  const handleCompile = async () => {
+    if (!uploadedPayload) {
+      setLogs(prev => prev + "\n❌ No payload uploaded!");
+      return;
+    }
+
+    setLogs(prev => prev + "⏳ Sending to backend...\n");
+
+    try {
+      const res = await fetch("http://localhost:3000/code/code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(uploadedPayload)
+      });
+
+      const msg = await res.text();
+      setLogs(prev => prev + "✔ Backend: " + msg + "\n");
+    } catch (err) {
+      setLogs(prev => prev + "❌ Error: " + err.message + "\n");
+    }
+  };
 
   return (
     <div className="p-4 space-y-3">
-
-      {/* Upload Button */}
+      
+      {/* Buttons */}
       <div className="flex items-center gap-3">
-        <label className="px-4 py-2 bg-emerald-600 text-white rounded cursor-pointer hover:bg-emerald-700">
+
+        {/* Upload button */}
+        <button
+          onClick={handleUpload}
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
           Upload Firmware
-          <input
-            type="file"
-            accept=".ino,.cpp,.h,.txt"
-            onChange={handleFileUpload}
-            className="hidden"
-          />
-        </label>
-
-        <button
-          className="px-3 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
-          onClick={checkDiagnostics}
-          disabled={isChecking}
-        >
-          {isChecking ? "Checking..." : "Check Syntax"}
         </button>
 
+        {/* Compile button */}
         <button
-          className="px-3 py-2 rounded bg-gray-600 text-white hover:bg-gray-700"
-          onClick={clearDiagnostics}
+          onClick={handleCompile}
+          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
         >
-          Clear
+          Compile Firmware
         </button>
+
       </div>
 
-      {/* Editor */}
+      {/* Monaco Editor */}
       <div
         ref={containerRef}
         style={{ height: 480 }}
@@ -225,11 +126,12 @@ void loop() {
 
       {/* Logs */}
       <div className="mt-2">
-        <div className="font-semibold">Compiler / Diagnostics Log</div>
+        <div className="font-semibold">Log</div>
         <pre className="bg-black/60 text-sm p-2 rounded max-h-40 overflow-auto text-white">
           {logs}
         </pre>
       </div>
+
     </div>
   );
 };
