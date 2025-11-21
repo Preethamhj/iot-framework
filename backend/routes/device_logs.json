@@ -4554,5 +4554,5045 @@
       "thresholdCrossings": 0
     },
     "serverTimestamp": "2025-11-21T09:17:01.561Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 81.36,
+      "uptimeSeconds": 155,
+      "lastContactTime": "2025-11-21T12:44:24Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 1,
+      "sendIntervalSec": 27,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.54,
+      "failedTransmissions": 0,
+      "retryCount": 4,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.36,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:44:39.181Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1217,
+      "batteryPercentage": 81.052,
+      "uptimeSeconds": 171,
+      "lastContactTime": "2025-11-21T12:44:39Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 2,
+      "sendIntervalSec": 15.39,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.308,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.052,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:44:43.148Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 80.952,
+      "uptimeSeconds": 176,
+      "lastContactTime": "2025-11-21T12:44:44Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 3,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.952,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:44:48.618Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 80.851,
+      "uptimeSeconds": 181,
+      "lastContactTime": "2025-11-21T12:44:49Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 4,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.851,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:44:53.085Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 80.751,
+      "uptimeSeconds": 186,
+      "lastContactTime": "2025-11-21T12:44:54Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 5,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -64
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.751,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:44:55.524Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 166,
+      "batteryPercentage": 80.65,
+      "uptimeSeconds": 191,
+      "lastContactTime": "2025-11-21T12:44:59Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 6,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.65,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:00.692Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 5,
+      "batteryPercentage": 80.55,
+      "uptimeSeconds": 196,
+      "lastContactTime": "2025-11-21T12:45:04Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 7,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.55,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:05.561Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 80.45,
+      "uptimeSeconds": 201,
+      "lastContactTime": "2025-11-21T12:45:09Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 8,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -53
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.45,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:10.683Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 80.349,
+      "uptimeSeconds": 206,
+      "lastContactTime": "2025-11-21T12:45:14Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 9,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.349,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:15.825Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 80.248,
+      "uptimeSeconds": 211,
+      "lastContactTime": "2025-11-21T12:45:19Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 10,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.248,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:20.670Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 80.147,
+      "uptimeSeconds": 216,
+      "lastContactTime": "2025-11-21T12:45:24Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 11,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.147,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:25.620Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 80.047,
+      "uptimeSeconds": 221,
+      "lastContactTime": "2025-11-21T12:45:29Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 12,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.047,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:30.794Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 79.947,
+      "uptimeSeconds": 226,
+      "lastContactTime": "2025-11-21T12:45:34Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 13,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.947,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:35.992Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 1686,
+      "batteryPercentage": 79.847,
+      "uptimeSeconds": 231,
+      "lastContactTime": "2025-11-21T12:45:39Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 14,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.847,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:40.870Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1580,
+      "batteryPercentage": 79.746,
+      "uptimeSeconds": 236,
+      "lastContactTime": "2025-11-21T12:45:44Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 15,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.746,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:45.751Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 1295,
+      "batteryPercentage": 79.646,
+      "uptimeSeconds": 241,
+      "lastContactTime": "2025-11-21T12:45:49Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 16,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.646,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:51.130Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 79.546,
+      "uptimeSeconds": 246,
+      "lastContactTime": "2025-11-21T12:45:54Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 17,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.546,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:45:55.924Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 79.445,
+      "uptimeSeconds": 251,
+      "lastContactTime": "2025-11-21T12:45:59Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 18,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.445,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:00.863Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1360,
+      "batteryPercentage": 79.344,
+      "uptimeSeconds": 256,
+      "lastContactTime": "2025-11-21T12:46:04Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 19,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.344,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:06.571Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 79.243,
+      "uptimeSeconds": 261,
+      "lastContactTime": "2025-11-21T12:46:10Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 20,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.243,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:10.999Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 79.143,
+      "uptimeSeconds": 266,
+      "lastContactTime": "2025-11-21T12:46:15Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 21,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.143,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:16.121Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 79.042,
+      "uptimeSeconds": 271,
+      "lastContactTime": "2025-11-21T12:46:20Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 22,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -61
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.042,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:21.018Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 78.942,
+      "uptimeSeconds": 276,
+      "lastContactTime": "2025-11-21T12:46:25Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 23,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.942,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:26.161Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 78.841,
+      "uptimeSeconds": 281,
+      "lastContactTime": "2025-11-21T12:46:30Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 24,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.841,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:30.880Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 1081,
+      "batteryPercentage": 78.74,
+      "uptimeSeconds": 286,
+      "lastContactTime": "2025-11-21T12:46:35Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 25,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.74,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:36.367Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 78.639,
+      "uptimeSeconds": 291,
+      "lastContactTime": "2025-11-21T12:46:40Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 26,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -62
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.639,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:41.014Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 78.539,
+      "uptimeSeconds": 296,
+      "lastContactTime": "2025-11-21T12:46:45Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 27,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.539,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:46.156Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 78.439,
+      "uptimeSeconds": 301,
+      "lastContactTime": "2025-11-21T12:46:50Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 28,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.439,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:51.278Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 78.339,
+      "uptimeSeconds": 306,
+      "lastContactTime": "2025-11-21T12:46:55Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 29,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -52
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.339,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:46:56.371Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 78.238,
+      "uptimeSeconds": 311,
+      "lastContactTime": "2025-11-21T12:47:00Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 30,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -59
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.238,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:01.276Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1302,
+      "batteryPercentage": 78.138,
+      "uptimeSeconds": 316,
+      "lastContactTime": "2025-11-21T12:47:05Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 31,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -62
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.138,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:06.499Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 78.037,
+      "uptimeSeconds": 321,
+      "lastContactTime": "2025-11-21T12:47:10Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 32,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 78.037,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:11.232Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 77.936,
+      "uptimeSeconds": 326,
+      "lastContactTime": "2025-11-21T12:47:15Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 33,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -64
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.936,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:16.231Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 77.836,
+      "uptimeSeconds": 331,
+      "lastContactTime": "2025-11-21T12:47:20Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 34,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.836,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:21.348Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1009,
+      "batteryPercentage": 77.736,
+      "uptimeSeconds": 336,
+      "lastContactTime": "2025-11-21T12:47:25Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 35,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.736,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:26.263Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 741,
+      "batteryPercentage": 77.635,
+      "uptimeSeconds": 341,
+      "lastContactTime": "2025-11-21T12:47:30Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 36,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -53
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.635,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:31.388Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 77.534,
+      "uptimeSeconds": 346,
+      "lastContactTime": "2025-11-21T12:47:35Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 37,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.534,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:37.434Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 77.434,
+      "uptimeSeconds": 351,
+      "lastContactTime": "2025-11-21T12:47:40Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 38,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.434,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:41.787Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1464,
+      "batteryPercentage": 77.334,
+      "uptimeSeconds": 356,
+      "lastContactTime": "2025-11-21T12:47:45Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 39,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -61
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.334,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:46.748Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 77.233,
+      "uptimeSeconds": 361,
+      "lastContactTime": "2025-11-21T12:47:50Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 40,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -61
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.233,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:51.569Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 55,
+      "batteryPercentage": 77.132,
+      "uptimeSeconds": 367,
+      "lastContactTime": "2025-11-21T12:47:55Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 41,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -62
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.132,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:47:56.589Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 77.032,
+      "uptimeSeconds": 372,
+      "lastContactTime": "2025-11-21T12:48:00Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 42,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -53
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 77.032,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:01.404Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 112,
+      "batteryPercentage": 76.932,
+      "uptimeSeconds": 377,
+      "lastContactTime": "2025-11-21T12:48:05Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 43,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -63
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.932,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:06.478Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 76.831,
+      "uptimeSeconds": 382,
+      "lastContactTime": "2025-11-21T12:48:10Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 44,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.831,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:11.517Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 76.73,
+      "uptimeSeconds": 387,
+      "lastContactTime": "2025-11-21T12:48:15Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 45,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -52
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.73,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:17.792Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1095,
+      "batteryPercentage": 76.63,
+      "uptimeSeconds": 392,
+      "lastContactTime": "2025-11-21T12:48:20Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 46,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -65
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.63,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:21.556Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 76.53,
+      "uptimeSeconds": 397,
+      "lastContactTime": "2025-11-21T12:48:25Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 47,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.53,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:26.898Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1863,
+      "batteryPercentage": 76.43,
+      "uptimeSeconds": 402,
+      "lastContactTime": "2025-11-21T12:48:30Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 48,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.43,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:31.597Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 2098,
+      "batteryPercentage": 76.329,
+      "uptimeSeconds": 407,
+      "lastContactTime": "2025-11-21T12:48:35Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 49,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -58
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.329,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:36.718Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 76.228,
+      "uptimeSeconds": 412,
+      "lastContactTime": "2025-11-21T12:48:40Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 50,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.228,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:42.038Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 76.127,
+      "uptimeSeconds": 417,
+      "lastContactTime": "2025-11-21T12:48:45Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 51,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.127,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:46.751Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 48,
+      "batteryPercentage": 76.026,
+      "uptimeSeconds": 422,
+      "lastContactTime": "2025-11-21T12:48:50Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 52,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -62
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 76.026,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:51.619Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 558,
+      "batteryPercentage": 75.925,
+      "uptimeSeconds": 427,
+      "lastContactTime": "2025-11-21T12:48:55Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 53,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -48
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.925,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:48:56.790Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 75.825,
+      "uptimeSeconds": 432,
+      "lastContactTime": "2025-11-21T12:49:00Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 54,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -48
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.825,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:02.332Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 75.724,
+      "uptimeSeconds": 437,
+      "lastContactTime": "2025-11-21T12:49:05Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 55,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -51
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.724,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:06.680Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2271,
+      "batteryPercentage": 75.624,
+      "uptimeSeconds": 442,
+      "lastContactTime": "2025-11-21T12:49:10Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 56,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -53
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.624,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:11.706Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 75.524,
+      "uptimeSeconds": 447,
+      "lastContactTime": "2025-11-21T12:49:15Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 57,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.524,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:16.860Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 75.424,
+      "uptimeSeconds": 452,
+      "lastContactTime": "2025-11-21T12:49:20Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 58,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.424,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:21.705Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 75.323,
+      "uptimeSeconds": 457,
+      "lastContactTime": "2025-11-21T12:49:26Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 59,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -53
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.323,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:26.887Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1691,
+      "batteryPercentage": 75.223,
+      "uptimeSeconds": 462,
+      "lastContactTime": "2025-11-21T12:49:31Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 60,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.223,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:31.812Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2391,
+      "batteryPercentage": 75.123,
+      "uptimeSeconds": 467,
+      "lastContactTime": "2025-11-21T12:49:36Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 61,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.123,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:36.749Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 75.022,
+      "uptimeSeconds": 472,
+      "lastContactTime": "2025-11-21T12:49:41Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 62,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 75.022,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:41.943Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 74.921,
+      "uptimeSeconds": 477,
+      "lastContactTime": "2025-11-21T12:49:46Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 63,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.921,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:46.882Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 74.82,
+      "uptimeSeconds": 482,
+      "lastContactTime": "2025-11-21T12:49:51Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 64,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -51
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.82,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:52.204Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 51,
+      "batteryPercentage": 74.72,
+      "uptimeSeconds": 487,
+      "lastContactTime": "2025-11-21T12:49:56Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 65,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -52
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.72,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:49:56.997Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 47,
+      "batteryPercentage": 74.619,
+      "uptimeSeconds": 492,
+      "lastContactTime": "2025-11-21T12:50:01Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 66,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -51
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.619,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:02.159Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2242,
+      "batteryPercentage": 74.519,
+      "uptimeSeconds": 497,
+      "lastContactTime": "2025-11-21T12:50:06Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 67,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -50
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.519,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:07.025Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2325,
+      "batteryPercentage": 74.419,
+      "uptimeSeconds": 502,
+      "lastContactTime": "2025-11-21T12:50:11Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 68,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -52
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.419,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:12.127Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 74.318,
+      "uptimeSeconds": 507,
+      "lastContactTime": "2025-11-21T12:50:16Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 69,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -49
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.318,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:17.293Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2058,
+      "batteryPercentage": 74.217,
+      "uptimeSeconds": 512,
+      "lastContactTime": "2025-11-21T12:50:21Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 70,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -49
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.217,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:22.218Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 1841,
+      "batteryPercentage": 74.117,
+      "uptimeSeconds": 517,
+      "lastContactTime": "2025-11-21T12:50:26Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 71,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.117,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:27.207Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 64,
+      "batteryPercentage": 74.016,
+      "uptimeSeconds": 522,
+      "lastContactTime": "2025-11-21T12:50:31Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 72,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -52
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 74.016,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:32.234Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1615,
+      "batteryPercentage": 73.916,
+      "uptimeSeconds": 527,
+      "lastContactTime": "2025-11-21T12:50:36Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 73,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -51
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 73.916,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:37.341Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 73.815,
+      "uptimeSeconds": 532,
+      "lastContactTime": "2025-11-21T12:50:41Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 74,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 73.815,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:42.216Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 73.715,
+      "uptimeSeconds": 537,
+      "lastContactTime": "2025-11-21T12:50:46Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 75,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 73.715,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:47.480Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 73.615,
+      "uptimeSeconds": 542,
+      "lastContactTime": "2025-11-21T12:50:51Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 76,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 73.615,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:52.286Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 73.514,
+      "uptimeSeconds": 547,
+      "lastContactTime": "2025-11-21T12:50:56Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 77,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 6,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 73.514,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:50:57.245Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.322,
+      "light": 1101,
+      "batteryPercentage": 81.9,
+      "uptimeSeconds": 12,
+      "lastContactTime": "2025-11-21T12:53:30Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 0,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -48
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": false,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.9,
+      "isAnomalyDetected": false
+    },
+    "serverTimestamp": "2025-11-21T12:53:31.829Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 223,
+      "batteryPercentage": 81.799,
+      "uptimeSeconds": 17,
+      "lastContactTime": "2025-11-21T12:53:35Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 1,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -50
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.799,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:53:36.959Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 81.699,
+      "uptimeSeconds": 22,
+      "lastContactTime": "2025-11-21T12:53:40Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 2,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 793,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -49
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.699,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:53:41.862Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 81.598,
+      "uptimeSeconds": 27,
+      "lastContactTime": "2025-11-21T12:53:45Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 3,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 793,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -47
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.598,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:53:47.011Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 272,
+      "batteryPercentage": 81.498,
+      "uptimeSeconds": 32,
+      "lastContactTime": "2025-11-21T12:53:50Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 4,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -51
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.498,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:53:51.714Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2747,
+      "batteryPercentage": 81.397,
+      "uptimeSeconds": 37,
+      "lastContactTime": "2025-11-21T12:53:55Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 5,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -50
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.397,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:53:57.025Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 81.297,
+      "uptimeSeconds": 42,
+      "lastContactTime": "2025-11-21T12:54:00Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 6,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 793,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -49
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.297,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:54:02.002Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 1275,
+      "batteryPercentage": 81.197,
+      "uptimeSeconds": 47,
+      "lastContactTime": "2025-11-21T12:54:05Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 7,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -50
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.197,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:54:06.887Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 89,
+      "batteryPercentage": 81.096,
+      "uptimeSeconds": 52,
+      "lastContactTime": "2025-11-21T12:54:10Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 8,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -48
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.096,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:54:11.792Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 0,
+      "batteryPercentage": 80.996,
+      "uptimeSeconds": 57,
+      "lastContactTime": "2025-11-21T12:54:15Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 9,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 793,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -50
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.996,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:54:16.905Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 2305,
+      "batteryPercentage": 80.895,
+      "uptimeSeconds": 62,
+      "lastContactTime": "2025-11-21T12:54:20Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 10,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -47
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.895,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:54:23.272Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 0,
+      "humidity": 0,
+      "distance": 4.339,
+      "light": 217,
+      "batteryPercentage": 80.795,
+      "uptimeSeconds": 67,
+      "lastContactTime": "2025-11-21T12:54:25Z"
+    },
+    "battery": {
+      "connectCount": 1,
+      "connAttemptCount": 1,
+      "sendCount": 11,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.795,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T12:54:26.921Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.875,
+      "humidity": 79,
+      "distance": 5.625,
+      "light": 29,
+      "batteryPercentage": 81.9,
+      "uptimeSeconds": 15,
+      "lastContactTime": "1970-01-01T00:00:15Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 0,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 796,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": false,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.9,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:13:54.338Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.785,
+      "humidity": 79,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.8,
+      "uptimeSeconds": 20,
+      "lastContactTime": "1970-01-01T00:00:20Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 1,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -68
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.8,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:13:59.316Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.456,
+      "humidity": 79,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.699,
+      "uptimeSeconds": 25,
+      "lastContactTime": "1970-01-01T00:00:25Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 2,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.699,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:04.328Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.161,
+      "humidity": 81,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.598,
+      "uptimeSeconds": 30,
+      "lastContactTime": "1970-01-01T00:00:30Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 3,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -51
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.598,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:09.738Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.555,
+      "humidity": 82,
+      "distance": 5.625,
+      "light": 2515,
+      "batteryPercentage": 81.498,
+      "uptimeSeconds": 35,
+      "lastContactTime": "1970-01-01T00:00:35Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 4,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -56
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.498,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:14.702Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.925,
+      "humidity": 80,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.397,
+      "uptimeSeconds": 40,
+      "lastContactTime": "1970-01-01T00:00:40Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 5,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.397,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:20.183Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.197,
+      "humidity": 81,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.297,
+      "uptimeSeconds": 45,
+      "lastContactTime": "1970-01-01T00:00:45Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 6,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -52
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.297,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:24.950Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.914,
+      "humidity": 80,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.196,
+      "uptimeSeconds": 50,
+      "lastContactTime": "1970-01-01T00:00:50Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 7,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.196,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:30.037Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.469,
+      "humidity": 82,
+      "distance": 5.625,
+      "light": 0,
+      "batteryPercentage": 81.096,
+      "uptimeSeconds": 55,
+      "lastContactTime": "1970-01-01T00:00:55Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 8,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 794,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 81.096,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:34.546Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.864,
+      "humidity": 79,
+      "distance": 5.625,
+      "light": 1684,
+      "batteryPercentage": 80.995,
+      "uptimeSeconds": 60,
+      "lastContactTime": "1970-01-01T00:01:00Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 9,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.995,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:39.977Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.904,
+      "humidity": 81,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 80.894,
+      "uptimeSeconds": 65,
+      "lastContactTime": "1970-01-01T00:01:05Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 10,
+      "sendIntervalSec": 5.05,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 795,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.894,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:44.417Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.327,
+      "humidity": 80,
+      "distance": 4.322,
+      "light": 137,
+      "batteryPercentage": 80.794,
+      "uptimeSeconds": 70,
+      "lastContactTime": "1970-01-01T00:01:10Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 11,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": true,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.794,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:49.612Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.988,
+      "humidity": 80,
+      "distance": 4.322,
+      "light": 3149,
+      "batteryPercentage": 80.694,
+      "uptimeSeconds": 75,
+      "lastContactTime": "1970-01-01T00:01:15Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 12,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 799,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.694,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:54.957Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.508,
+      "humidity": 81,
+      "distance": 4.322,
+      "light": 2308,
+      "batteryPercentage": 80.594,
+      "uptimeSeconds": 80,
+      "lastContactTime": "1970-01-01T00:01:20Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 13,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 799,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.594,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:14:59.597Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.612,
+      "humidity": 81,
+      "distance": 4.339,
+      "light": 208,
+      "batteryPercentage": 80.493,
+      "uptimeSeconds": 85,
+      "lastContactTime": "1970-01-01T00:01:25Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 14,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.493,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:05.315Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.001,
+      "humidity": 80,
+      "distance": 4.322,
+      "light": 1633,
+      "batteryPercentage": 80.393,
+      "uptimeSeconds": 90,
+      "lastContactTime": "1970-01-01T00:01:30Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 15,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 799,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -61
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.393,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:09.791Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.44,
+      "humidity": 79,
+      "distance": 4.322,
+      "light": 294,
+      "batteryPercentage": 80.293,
+      "uptimeSeconds": 95,
+      "lastContactTime": "1970-01-01T00:01:35Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 16,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -54
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.293,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:14.633Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.217,
+      "humidity": 81,
+      "distance": 4.322,
+      "light": 2144,
+      "batteryPercentage": 80.193,
+      "uptimeSeconds": 100,
+      "lastContactTime": "1970-01-01T00:01:40Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 17,
+      "sendIntervalSec": 5,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 800,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -60
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.193,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:19.740Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.657,
+      "humidity": 79,
+      "distance": 4.322,
+      "light": 0,
+      "batteryPercentage": 80.092,
+      "uptimeSeconds": 105,
+      "lastContactTime": "1970-01-01T00:01:45Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 18,
+      "sendIntervalSec": 5.01,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 797,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -70
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 80.092,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:25.060Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.995,
+      "humidity": 82,
+      "distance": 4.322,
+      "light": 159,
+      "batteryPercentage": 79.992,
+      "uptimeSeconds": 110,
+      "lastContactTime": "1970-01-01T00:01:50Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 19,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 799,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.992,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:29.840Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.159,
+      "humidity": 82,
+      "distance": 4.339,
+      "light": 187,
+      "batteryPercentage": 79.891,
+      "uptimeSeconds": 115,
+      "lastContactTime": "1970-01-01T00:01:55Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 20,
+      "sendIntervalSec": 5.03,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 799,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -65
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.891,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:34.714Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.441,
+      "humidity": 79,
+      "distance": 4.339,
+      "light": 175,
+      "batteryPercentage": 79.79,
+      "uptimeSeconds": 120,
+      "lastContactTime": "1970-01-01T00:02:00Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 21,
+      "sendIntervalSec": 5.02,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 799,
+      "batteryConsumedThisPayload": 0.1,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -55
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.79,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:39.827Z"
+  },
+  {
+    "digitalTwin": {
+      "deviceId": "ESP32-DEVKIT-001",
+      "deviceType": "IoT Sensor Node",
+      "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM",
+      "firmware": "v1.0.0",
+      "sensors": "DHT22, HC-SR04, LDR",
+      "lastOTA": "2025-01-01T00:00:00Z"
+    },
+    "telemetry": {
+      "temperature": 22.014,
+      "humidity": 80,
+      "distance": 4.322,
+      "light": 58,
+      "batteryPercentage": 79.69,
+      "uptimeSeconds": 125,
+      "lastContactTime": "1970-01-01T00:02:05Z"
+    },
+    "battery": {
+      "connectCount": 0,
+      "connAttemptCount": 1,
+      "sendCount": 22,
+      "sendIntervalSec": 5.04,
+      "firmwareUpdateCount": 0,
+      "payloadSizeBytes": 798,
+      "batteryConsumedThisPayload": 0.101,
+      "failedTransmissions": 0,
+      "retryCount": 0,
+      "wifiRSSI": -57
+    },
+    "behaviour": {
+      "resetCount": 0,
+      "connectionPattern": "stable"
+    },
+    "anomaly": {
+      "sensorJump": false,
+      "batterySpike": true,
+      "tampering": false
+    },
+    "security": {
+      "currentBattery": 79.69,
+      "isAnomalyDetected": true
+    },
+    "serverTimestamp": "2025-11-21T13:15:44.932Z"
   }
 ]

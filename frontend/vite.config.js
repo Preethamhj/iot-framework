@@ -4,5 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(),
+    monacoEditorPlugin({ 
+        // Specify the workers you need. 'cpp' is correct for Arduino.
+        languageWorkers: ['editorWorkerService', 'cpp'] 
+    })
+  ],
 })
