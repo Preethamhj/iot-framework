@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { Shield, Lock, Zap, Clock, Wifi, AlertTriangle } from 'lucide-react';
+// Import the theme context hook from the correct relative path
 import { useTheme } from '../context/ThemeContext'; 
 
 // --- MOCK DATA AND UTILITY FUNCTIONS ---
@@ -31,7 +32,7 @@ function getSecurityDecisions(device) {
         frequencyHz = 10;
     }
     
-    const updateIntervalSec = Math.round(1000 / frequencyHz) / 1000;
+    const updateIntervalSec = Math.round(1000 / frequencyHz) / 1000; 
 
     return {
         encryptionLevel: `${encryptionLevel}-bit AES`,
@@ -69,18 +70,21 @@ export default function SecureCenter() {
     >
       <div className="max-w-7xl mx-auto">
         <header className="mb-10">
-          <h1
-            className="text-4xl font-extrabold mb-2"
-            // Adjusted gradient to match Digital Twin's heading (Image 2)
-            style={{ 
-              background: isDarkMode ? 'linear-gradient(90deg, #10B981, #06B6D4)' : 'linear-gradient(90deg, #059669, #0891b2)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}
-          >
-            🛡️ Security Control Center
-          </h1>
+          {/* FIX APPLIED: Wrapped h1 in a div with w-fit to give the gradient text full space */}
+          <div className="w-fit">
+            <h1
+              className="text-4xl font-extrabold mb-2" 
+              style={{ 
+                background: isDarkMode ? 'linear-gradient(90deg, #10B981, #06B6D4)' : 'linear-gradient(90deg, #059669, #0891b2)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                display: 'inline-block' 
+              }}
+            >
+              🛡️ Security Control Center
+            </h1>
+          </div>
           <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             Security-Resource Trade-off Model Decisions
           </p>
@@ -126,7 +130,6 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
     const cardStyle = useMemo(() => ({
         animationDelay: `${index * 100}ms`, 
         backdropFilter: isDarkMode ? 'blur(12px)' : 'none',
-        // Adjusted shadow for a slightly softer look, similar to Digital Twin cards
         boxShadow: isDarkMode 
             ? `0 8px 32px rgba(0,0,0,0.4), 0 0 5px ${risk === 'High' ? color.hex : 'transparent'}` 
             : '0 4px 16px rgba(0,0,0,0.08)',
@@ -135,8 +138,7 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
 
     const chartData = [
         { label: 'Security', value: risk === 'High' ? 100 : risk === 'Moderate' ? 65 : 30, color: color.hex },
-        // Representing resource cost or usage against security
-        { label: 'Battery', value: Math.max(0, 100 - device.battery), color: '#06B6D4' }, 
+        { label: 'Battery Cost', value: Math.max(0, 100 - device.battery), color: '#06B6D4' }, 
         { label: 'Anomaly', value: device.anomalyScore * 100, color: '#FCD34D' },
     ];
     
@@ -178,7 +180,7 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
                 ))}
             </div>
 
-            {/* Decision Outputs remain as the primary output */}
+            {/* Decision Outputs */}
             <h3 className={`text-base font-semibold mb-4 border-t pt-4 ${isDarkMode ? 'text-yellow-300 border-gray-700' : 'text-yellow-700 border-gray-200'}`}>
                 Decision Outputs
             </h3>
@@ -188,12 +190,12 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
                 <DecisionPill icon={Zap} label="Interval" value={device.updateInterval} isDarkMode={isDarkMode} />
             </div>
 
-            {/* ML Inputs Summary and Raw Telemetry sections have been removed */}
+            {/* Removed: ML Inputs Summary and Raw Telemetry sections */}
         </div>
     );
 };
 
-// --- SUB-COMPONENTS (Unchanged) ---
+// --- SUB-COMPONENTS ---
 
 const TradeOffMetric = ({ data, isDarkMode }) => {
     const glowColor = data.color === '#f87171' ? 'rgba(255, 0, 0, 0.5)' : data.color;
@@ -241,7 +243,6 @@ const DecisionPill = ({ icon: Icon, label, value, isDarkMode }) => (
     </div>
 );
 
-// DataPoint is no longer used directly in the main card, but kept for potential future use or if needed elsewhere.
 const DataPoint = ({ icon: Icon, label, value, isDarkMode, highlight = false }) => (
     <div className="flex items-center justify-between">
         <div className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>

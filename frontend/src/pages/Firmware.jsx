@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as monaco from 'monaco-editor';
 import { useTheme } from '../context/ThemeContext';
+import { Code } from 'lucide-react'; // Added Code icon
+
+// --- Monaco Editor Component (Unchanged Logic) ---
 
 const MonacoArduinoEditor = ({ initialCode }) => {
   const editorRef = useRef(null);
@@ -64,33 +67,34 @@ void loop() {
     return monaco.MarkerSeverity.Info;
   }
 
-  /** Fallback parser */
+  /** Fallback parser (Omitted for brevity, logic remains) */
   function parseGccOutputToMarkers(output) {
-    const markers = [];
-    const lines = output.split("\n");
-    const re = /(?:[^:\n]+):(\d+):(\d+):\s*(error|warning|note):\s*(.*)$/i;
+     const markers = [];
+     const lines = output.split("\n");
+     const re = /(?:[^:\n]+):(\d+):(\d+):\s*(error|warning|note):\s*(.*)$/i;
 
-    for (const l of lines) {
-      const m = l.match(re);
-      if (m) {
-        const line = parseInt(m[1]) - 1;
-        const col = parseInt(m[2]);
-        const sev = /error/i.test(m[3]) ? 1 : /warning/i.test(m[3]) ? 2 : 3;
+     for (const l of lines) {
+       const m = l.match(re);
+       if (m) {
+         const line = parseInt(m[1]) - 1;
+         const col = parseInt(m[2]);
+         const sev = /error/i.test(m[3]) ? 1 : /warning/i.test(m[3]) ? 2 : 3;
 
-        markers.push({
-          startLineNumber: line + 1,
-          startColumn: col,
-          endLineNumber: line + 1,
-          endColumn: col + 1,
-          message: m[4],
-          severity: mapSeverity(sev),
-        });
-      }
-    }
-    return markers;
+         markers.push({
+           startLineNumber: line + 1,
+           startColumn: col,
+           endLineNumber: line + 1,
+           endColumn: col + 1,
+           message: m[4],
+           severity: mapSeverity(sev),
+         });
+       }
+     }
+     return markers;
   }
 
-  /** Syntax check button */
+
+  /** Syntax check button (Logic remains, API call placeholder) */
   async function checkDiagnostics() {
     if (!model) return;
     setIsChecking(true);
@@ -99,6 +103,7 @@ void loop() {
     const code = model.getValue();
 
     try {
+      // NOTE: This API call placeholder needs a real backend endpoint.
       const resp = await fetch("/api/diagnostics", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -187,7 +192,6 @@ void loop() {
 
   return (
     <div className="p-4 space-y-3">
-
       {/* Upload Button */}
       <div className="flex items-center gap-3">
         <label className="px-4 py-2 bg-emerald-600 text-white rounded cursor-pointer hover:bg-emerald-700">
@@ -234,6 +238,8 @@ void loop() {
   );
 };
 
+// --- Firmware Page Component (Header Fixed) ---
+
 export default function Firmware() {
   const { isDarkMode } = useTheme();
 
@@ -243,7 +249,24 @@ export default function Firmware() {
         isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100"
       }`}
     >
-      <h1 className="text-3xl font-bold mb-4">Firmware Editor</h1>
+      {/* FIX APPLIED: Added gradient styles to match the theme */}
+      <div className="w-fit mb-6">
+        <h1 
+            className="text-4xl font-extrabold"
+            style={{ 
+                // Digital Twin Theme Gradient: Green to Cyan/Blue
+                background: isDarkMode ? 'linear-gradient(90deg, #10B981, #06B6D4)' : 'linear-gradient(90deg, #059669, #0891b2)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                display: 'inline-block' 
+            }}
+        >
+            <Code className='inline-block align-text-bottom mr-2 w-7 h-7' />
+            Firmware Editor
+        </h1>
+      </div>
+      
       <MonacoArduinoEditor />
     </div>
   );
