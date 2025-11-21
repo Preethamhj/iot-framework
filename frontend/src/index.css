@@ -1,1 +1,20 @@
 @import "tailwindcss";
+/* Full-viewport reset — prevents white edges */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #07090b; /* fallback dark background if image missing */
+}
+
+/* Ensure all elements inherit box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Optional: ensure scrollbars don't cause horizontal overflow */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
