@@ -1,16 +1,17 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Activity, Battery, Radio, Users, Shield, Sun, Moon, Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Home, Activity, Battery, Radio, Users, Shield, Sun, Moon, Menu, X, LogOut } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useState } from 'react';
 
-const Navbar = () => {
+// Receive onLogout as a prop
+const Navbar = ({ onLogout }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { isDarkMode, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
-  
     { path: '/battery', label: 'Battery', icon: Battery },
     { path: '/firmware', label: 'Firmware', icon: Radio },
     { path: '/digital-twin', label: 'Digital Twin', icon: Users },
@@ -18,6 +19,11 @@ const Navbar = () => {
   ];
 
   const isActive = (path) => location.pathname === path;
+
+  const handleLogoutClick = () => {
+    onLogout(); // Call the function passed from App.jsx
+    navigate('/login');
+  };
 
   return (
     <nav className={`${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-b sticky top-0 z-50 backdrop-blur-sm`}>
@@ -56,17 +62,21 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
+          {/* Actions */}
           <div className="flex items-center gap-2">
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} transition-colors`}
             >
-              {isDarkMode ? (
-                <Sun className="w-5 h-5 text-yellow-400" />
-              ) : (
-                <Moon className="w-5 h-5 text-indigo-600" />
-              )}
+              {isDarkMode ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-indigo-600" />}
+            </button>
+
+            <button
+              onClick={handleLogoutClick}
+              className={`hidden md:flex p-2 rounded-lg ${isDarkMode ? 'bg-gray-800 hover:bg-red-900/50 text-red-400' : 'bg-gray-100 hover:bg-red-50 text-red-600'} transition-colors`}
+              title="Logout"
+            >
+              <LogOut className="w-5 h-5" />
             </button>
 
             <button
@@ -105,6 +115,13 @@ const Navbar = () => {
                 </Link>
               );
             })}
+            <button
+              onClick={handleLogoutClick}
+              className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all"
+            >
+              <LogOut className="w-5 h-5" />
+              <span className="font-medium">Logout</span>
+            </button>
           </div>
         )}
       </div>
