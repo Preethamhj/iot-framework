@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
-import Analytics from './pages/Analytics';
 import BatteryManagement from './pages/BatteryManagement';
 import Firmware from './pages/Firmware';
 import Digitaltwinmonitor from './pages/Digitaltwinmonitor';
