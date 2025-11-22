@@ -7,8 +7,8 @@ import { useTheme } from '../context/ThemeContext';
 
 const securityDevicesMock = [
   { id: 'Gateway-01', type: 'ESP32', battery: 85, predictedBattery: 78, anomalyScore: 0.1, payloadSize: 256, rssi: -65, uptime: '45d 12h' },
-  { id: 'Sensor-A3', type: 'LoRa Node', battery: 42, predictedBattery: 38, anomalyScore: 0.8, payloadSize: 64, rssi: -102, uptime: '18d 03h' },
-  { id: 'Actuator-X9', type: 'STM32', battery: 99, predictedBattery: 99, anomalyScore: 0.05, payloadSize: 128, rssi: -50, uptime: '02d 08h' },
+  { id: 'Raspberry Pi38', type: 'Raspberry Pi', battery: 42, predictedBattery: 38, anomalyScore: 0.8, payloadSize: 64, rssi: -102, uptime: '18d 03h' },
+  { id: 'US-SENS-01', type: 'Ultrasonic', battery: 99, predictedBattery: 99, anomalyScore: 0.05, payloadSize: 128, rssi: -50, uptime: '02d 08h' },
 ];
 
 function getSecurityDecisions(device) {

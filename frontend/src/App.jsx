@@ -15,12 +15,9 @@ import { ThemeProvider } from "./context/ThemeContext";
 import ModelViewer from "./components/ModelViewer";
 
 /*
-  This App.jsx:
-  - keeps your auth + splash logic
-  - adds an inline ModelPage (color picker + mode) at /model (protected)
-  - you can drop this in as-is (ensure ModelViewer accepts props: modelUrl, color, mode, keepTextures)
+  ModelPage Component
+  - Helper component for the /model route to preview 3D assets
 */
-
 function ModelPage() {
   const [color, setColor] = useState("#ff6666");
   const [mode, setMode] = useState("tint"); // "tint" or "replace"
@@ -82,10 +79,29 @@ function App() {
 
   // Check for logged-in user on app load
   useEffect(() => {
-    const user = localStorage.getItem("currentUser");
-    if (user) {
-      setIsAuthenticated(true);
-    }
+    const checkAuth = () => {
+      const user = localStorage.getItem("currentUser");
+      if (user) {
+        try {
+          // Try parsing the user to ensure it's valid JSON data
+          const parsedUser = JSON.parse(user);
+          if (parsedUser && typeof parsedUser === 'object') {
+            setIsAuthenticated(true);
+          } else {
+            throw new Error("Invalid user data");
+          }
+        } catch (error) {
+          // If parsing fails, clear the corrupt data and force login
+          console.warn("Auth check failed, clearing session:", error);
+          localStorage.removeItem("currentUser");
+          setIsAuthenticated(false);
+        }
+      } else {
+        setIsAuthenticated(false);
+      }
+    };
+
+    checkAuth();
 
     // Splash screen timer
     const timer = setTimeout(() => {
@@ -128,7 +144,7 @@ function App() {
               element={!isAuthenticated ? <Signup /> : <Navigate to="/" />}
             />
 
-            {/* Protected Routes */}
+            {/* Protected Routes - Wrapped in checks */}
             <Route
               path="/"
               element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
@@ -156,7 +172,7 @@ function App() {
               element={isAuthenticated ? <ModelPage /> : <Navigate to="/login" />}
             />
 
-            {/* fallback: redirect unknown routes */}
+            {/* Fallback: Catch-all redirect */}
             <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/login"} />} />
           </Routes>
         </div>
