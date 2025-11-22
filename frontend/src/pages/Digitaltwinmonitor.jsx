@@ -3,9 +3,12 @@ import {
   LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Area, CartesianGrid, RadialBarChart, RadialBar
 } from 'recharts';
 import {
-  Cpu, Shield, TrendingUp, Thermometer, Droplets, Ruler, X
+  Cpu, Shield, TrendingUp, Thermometer, Droplets, Ruler, X, Box
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+
+// Import the new Sketchfab viewer
+import SketchfabViewer from '../components/SketchFabViewer';
 
 const initialDevices = [
   {
@@ -150,8 +153,32 @@ export default function Digitaltwinmonitor() {
         </div>
 
         {/* Grid cards */}
-        <style>{`@media(min-width:1100px){ .dt-grid{grid-template-columns:1fr 1fr 1fr;} }`}</style>
+        <style>{`
+          @media(min-width:1100px){ 
+            .dt-grid { grid-template-columns: 1fr 1fr 1fr; } 
+            .span-2 { grid-column: span 2; }
+          }
+        `}</style>
         <div className="dt-grid" style={{ display: 'grid', gap: 20 }}>
+          
+          {/* 3D Viewer Card - USING SKETCHFAB */}
+          <div className="span-2" style={{ ...glassCardStyle(isDarkMode), overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
+              <div style={glassIconStyle(isDarkMode)}><Box size={20} /></div>
+              <div>
+                <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>Live Digital Twin</h3>
+                <div style={{ color: isDarkMode ? 'rgba(255,255,255,0.7)' : 'rgba(30,41,59,0.6)', fontSize: 13 }}>
+                  Interactive 3D View • {selectedDevice?.id}
+                </div>
+              </div>
+            </div>
+            
+            {/* Container for the viewer */}
+            <div style={{ flex: 1, minHeight: 400, background: isDarkMode ? 'rgba(0,0,0,0.2)' : '#f1f5f9', borderRadius: 12, overflow: 'hidden' }}>
+              <SketchfabViewer />
+            </div>
+          </div>
+
           {/* Device Identity Card */}
           <div style={glassCardStyle(isDarkMode)}>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
@@ -175,8 +202,8 @@ export default function Digitaltwinmonitor() {
             </div>
           </div>
 
-          {/* Live Telemetry Card */}
-          <div style={glassCardStyle(isDarkMode)}>
+          {/* Live Telemetry Card - Spans 2 cols for better chart width on desktop */}
+          <div className="span-2" style={glassCardStyle(isDarkMode)}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
               <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                 <div style={glassIconStyle(isDarkMode)}><TrendingUp /></div>
@@ -255,7 +282,7 @@ export default function Digitaltwinmonitor() {
         </div>
       </div>
 
-      {/* Drawer Overlay */}
+      {/* Drawer Overlay and Panel */}
       {drawerOpen && (
         <div
           onClick={() => setDrawerOpen(false)}
@@ -270,7 +297,6 @@ export default function Digitaltwinmonitor() {
         />
       )}
 
-      {/* Drawer Panel */}
       <div
         style={{
           position: 'fixed',
@@ -291,281 +317,123 @@ export default function Digitaltwinmonitor() {
           boxSizing: 'border-box'
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, paddingBottom: 16, borderBottom: isDarkMode ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.1)' }}>
-          <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800 }}>Add New Device</h2>
-          <button
-            onClick={() => setDrawerOpen(false)}
-            style={{
-              width: 36,
-              height: 36,
-              borderRadius: 8,
-              border: isDarkMode ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.1)',
-              background: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              transition: 'all 0.2s'
-            }}
-          >
-            <X size={20} />
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
+          <h2 style={{ fontSize: 24, fontWeight: 800, margin: 0 }}>Add New Device</h2>
+          <button onClick={() => setDrawerOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: isDarkMode ? '#fff' : '#000' }}>
+            <X />
           </button>
         </div>
 
-        <AddDeviceForm onAdd={handleAddDevice} onCancel={() => setDrawerOpen(false)} isDark={isDarkMode} />
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          const fd = new FormData(e.target);
+          const newDev = {
+            id: fd.get('did'),
+            type: fd.get('type'),
+            status: 'active',
+            firmwareVersion: 'v1.0.0',
+            sensors: ['Generic'],
+            capabilities: ['Basic'],
+            telemetry: { temperature: 25, humidity: 50, distance: 0, batteryRemaining: 100, batteryUsed: 0, uptime: '0s', lastContact: 'Just now' },
+            gateway: { mode: 'Standard', securityLevel: 'Low', transmissionFreq: '60s' }
+          };
+          handleAddDevice(newDev);
+        }}>
+          <div style={{ marginBottom: 16 }}>
+            <label style={{ display: 'block', marginBottom: 8, fontWeight: 600, fontSize: 14 }}>Device ID</label>
+            <input name="did" required style={inputStyle(isDarkMode)} placeholder="e.g. ESP32-X9" />
+          </div>
+          <div style={{ marginBottom: 24 }}>
+            <label style={{ display: 'block', marginBottom: 8, fontWeight: 600, fontSize: 14 }}>Type</label>
+            <select name="type" style={inputStyle(isDarkMode)}>
+              <option>ESP32</option>
+              <option>LoRa Node</option>
+              <option>STM32</option>
+              <option>Raspberry Pi</option>
+            </select>
+          </div>
+          <button type="submit" style={{
+            width: '100%', padding: 14, borderRadius: 12, border: 'none',
+            background: isDarkMode ? '#34D399' : '#059669',
+            color: isDarkMode ? '#000' : '#fff', fontWeight: 700, cursor: 'pointer'
+          }}>
+            Register Device
+          </button>
+        </form>
       </div>
-
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-        }
-      `}</style>
     </div>
   );
 }
 
-/* -------- AddDeviceForm -------- */
-function AddDeviceForm({ onAdd, onCancel, isDark }) {
-  const [form, setForm] = useState({
-    id: '',
-    type: '',
-    firmwareVersion: 'v1.0.0',
-    sensors: '',
-    capabilities: '',
-    batteryRemaining: 100,
-    batteryUsed: 0,
-    uptime: '0d 0h',
-    gatewayMode: 'Balanced',
-    gatewaySecurity: 'Medium',
-    gatewayFreq: '10s'
-  });
-
-  const change = key => e => setForm(prev => ({ ...prev, [key]: e.target.value }));
-
-  const submit = (e) => {
-    e.preventDefault();
-    if (!form.id || !form.type) return alert('Enter device id and type');
-
-    const newDevice = {
-      id: form.id,
-      type: form.type,
-      status: 'active',
-      firmwareVersion: form.firmwareVersion,
-      sensors: form.sensors ? form.sensors.split(',').map(s => s.trim()) : [],
-      capabilities: form.capabilities ? form.capabilities.split(',').map(s => s.trim()) : [],
-      telemetry: {
-        temperature: 23 + Math.round(Math.random() * 10),
-        humidity: 40 + Math.round(Math.random() * 20),
-        distance: 0,
-        batteryRemaining: Number(form.batteryRemaining),
-        batteryUsed: Number(form.batteryUsed),
-        uptime: form.uptime,
-        lastContact: 'now'
-      },
-      gateway: {
-        mode: form.gatewayMode,
-        securityLevel: form.gatewaySecurity,
-        transmissionFreq: form.gatewayFreq,
-        lastOTA: new Date().toISOString().split('T')[0]
-      }
-    };
-
-    onAdd(newDevice);
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '12px 16px',
-    borderRadius: 8,
-    border: isDark ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.1)',
-    background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
-    color: isDark ? '#fff' : '#000',
-    fontSize: 14,
-    transition: 'all 0.2s',
-    boxSizing: 'border-box'
-  };
-
-  return (
-    <form onSubmit={submit} style={{ display: 'grid', gap: 16 }}>
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Device ID *</label>
-        <input value={form.id} onChange={change('id')} placeholder="e.g. ESP32-A2" style={inputStyle} required />
-      </div>
-
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Device Type *</label>
-        <input value={form.type} onChange={change('type')} placeholder="e.g. ESP32" style={inputStyle} required />
-      </div>
-
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Firmware Version</label>
-        <input value={form.firmwareVersion} onChange={change('firmwareVersion')} style={inputStyle} />
-      </div>
-
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Sensors (comma separated)</label>
-        <input value={form.sensors} onChange={change('sensors')} placeholder="DHT22, Ultrasonic" style={inputStyle} />
-      </div>
-
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Capabilities (comma separated)</label>
-        <input value={form.capabilities} onChange={change('capabilities')} placeholder="WiFi, Bluetooth" style={inputStyle} />
-      </div>
-
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-        <div>
-          <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Battery Remaining %</label>
-          <input value={form.batteryRemaining} onChange={change('batteryRemaining')} type="number" min="0" max="100" style={inputStyle} />
-        </div>
-        <div>
-          <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Battery Used %</label>
-          <input value={form.batteryUsed} onChange={change('batteryUsed')} type="number" min="0" max="100" style={inputStyle} />
-        </div>
-      </div>
-
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Uptime</label>
-        <input value={form.uptime} onChange={change('uptime')} placeholder="0d 0h" style={inputStyle} />
-      </div>
-
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-        <div>
-          <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Gateway Mode</label>
-          <select value={form.gatewayMode} onChange={change('gatewayMode')} style={inputStyle}>
-            <option>Balanced</option>
-            <option>Battery Saving</option>
-            <option>Security Priority</option>
-          </select>
-        </div>
-        <div>
-          <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Security Level</label>
-          <select value={form.gatewaySecurity} onChange={change('gatewaySecurity')} style={inputStyle}>
-            <option>Low</option>
-            <option>Medium</option>
-            <option>High</option>
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label style={{ display: 'block', marginBottom: 8, fontSize: 13, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.7)' }}>Transmission Frequency</label>
-        <input value={form.gatewayFreq} onChange={change('gatewayFreq')} placeholder="10s" style={inputStyle} />
-      </div>
-
-      <div style={{ display: 'flex', gap: 12, marginTop: 8 }}>
-        <button
-          type="submit"
-          style={{
-            flex: 1,
-            padding: '12px 24px',
-            borderRadius: 8,
-            border: 'none',
-            background: '#10b981',
-            color: '#fff',
-            fontSize: 15,
-            fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'all 0.2s'
-          }}
-        >
-          Add Device
-        </button>
-        <button
-          type="button"
-          onClick={onCancel}
-          style={{
-            flex: 1,
-            padding: '12px 24px',
-            borderRadius: 8,
-            border: isDark ? '1px solid rgba(255,255,255,0.2)' : '1px solid rgba(0,0,0,0.2)',
-            background: 'transparent',
-            color: isDark ? '#fff' : '#000',
-            fontSize: 15,
-            fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'all 0.2s'
-          }}
-        >
-          Cancel
-        </button>
-      </div>
-    </form>
-  );
-}
-
-/* ---------- Helpers ---------- */
+// --- Helper Styles & Components ---
 
 function glassCardStyle(isDark) {
   return {
-    borderRadius: 14,
-    padding: 20,
-    background: isDark ? 'linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))' : 'rgba(255,255,255,0.95)',
-    border: isDark ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(0,0,0,0.08)',
-    boxShadow: isDark ? '0 20px 50px rgba(2,6,23,0.7)' : '0 8px 24px rgba(2,6,23,0.08)',
-    backdropFilter: 'blur(10px) saturate(130%)',
-    transition: 'transform .25s ease, box-shadow .25s ease'
+    background: isDark ? 'rgba(30,41,59,0.4)' : 'rgba(255,255,255,0.65)',
+    backdropFilter: 'blur(10px)',
+    borderRadius: 20,
+    border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(255,255,255,0.6)',
+    padding: 24,
+    boxShadow: isDark ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 24px rgba(0,0,0,0.04)'
   };
 }
 
 function glassIconStyle(isDark) {
   return {
-    width: 44,
-    height: 44,
-    borderRadius: 10,
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: isDark ? 'linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))' : '#f8fafc',
-    boxShadow: isDark ? '0 8px 26px rgba(0,0,0,0.5)' : '0 4px 12px rgba(2,6,23,0.08)'
+    width: 40, height: 40, borderRadius: 12,
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    background: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)',
+    color: isDark ? '#fff' : '#334155'
   };
 }
 
-const InfoRow = ({ label, value, accent, valueRight, isDark }) => (
-  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0' }}>
-    <div style={{ color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.6)', fontSize: 14 }}>{label}</div>
-    <div style={{ fontWeight: 700, color: accent || (isDark ? '#fff' : '#000'), textAlign: valueRight ? 'right' : 'left', fontSize: 14 }}>{value}</div>
-  </div>
-);
-
-const SmallChip = ({ isDark, label, text }) => (
-  <div style={{
-    padding: '10px 14px',
-    borderRadius: 999,
-    background: isDark ? 'rgba(255,255,255,0.03)' : '#eef2ff',
-    border: isDark ? '1px solid rgba(255,255,255,0.04)' : '1px solid rgba(0,0,0,0.06)',
-    color: isDark ? 'rgba(255,255,255,0.9)' : '#0f172a',
-    fontSize: 13,
-    display: 'inline-flex',
-    gap: 10,
-    alignItems: 'center'
-  }}>
-    <div style={{ fontWeight: 700 }}>{label}</div>
-    <div style={{ opacity: 0.95, fontSize: 13 }}>{text}</div>
-  </div>
-);
-
-const MetricCard = ({ isDark, label, value, icon }) => (
-  <div style={{
-    minWidth: 120,
-    padding: 12,
-    borderRadius: 12,
-    background: isDark ? 'rgba(255,255,255,0.02)' : '#fff',
-    border: isDark ? '1px solid rgba(255,255,255,0.02)' : '1px solid rgba(0,0,0,0.06)',
-    display: 'flex',
-    gap: 12,
-    alignItems: 'center'
-  }}>
-    <div style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(255,255,255,0.03)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      {icon}
+function InfoRow({ label, value, accent, valueRight, isDark }) {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: isDark ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(0,0,0,0.05)' }}>
+      <span style={{ fontSize: 13, opacity: 0.7 }}>{label}</span>
+      <span style={{ fontWeight: 600, fontSize: 13, color: accent ? accent : (isDark ? '#fff' : '#0f172a'), textAlign: valueRight ? 'right' : 'left' }}>
+        {value}
+      </span>
     </div>
-    <div>
-      <div style={{ fontSize: 12, color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(30,41,59,0.7)' }}>{label}</div>
-      <div style={{ fontWeight: 800 }}>{value}</div>
+  );
+}
+
+function SmallChip({ label, text, isDark }) {
+  return (
+    <div style={{
+      padding: '4px 10px', borderRadius: 6, fontSize: 11, fontWeight: 600,
+      background: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
+      color: isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.7)'
+    }}>
+      <span style={{ opacity: 0.6, marginRight: 6 }}>{label}:</span>
+      {text}
     </div>
-  </div>
-);
+  );
+}
+
+function MetricCard({ label, value, icon, isDark }) {
+  return (
+    <div style={{
+      flex: 1, padding: 12, borderRadius: 12,
+      background: isDark ? 'rgba(255,255,255,0.04)' : '#fff',
+      border: isDark ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(0,0,0,0.06)',
+      display: 'flex', alignItems: 'center', gap: 10
+    }}>
+      <div style={{ color: isDark ? '#94a3b8' : '#64748b', transform: 'scale(0.85)' }}>{icon}</div>
+      <div>
+        <div style={{ fontSize: 11, opacity: 0.6 }}>{label}</div>
+        <div style={{ fontWeight: 700, fontSize: 14 }}>{value}</div>
+      </div>
+    </div>
+  );
+}
+
+function inputStyle(isDark) {
+  return {
+    width: '100%', padding: 12, borderRadius: 10,
+    border: isDark ? '1px solid rgba(255,255,255,0.1)' : '1px solid #e2e8f0',
+    background: isDark ? 'rgba(0,0,0,0.3)' : '#fff',
+    color: isDark ? '#fff' : '#000',
+    boxSizing: 'border-box'
+  };
+}
