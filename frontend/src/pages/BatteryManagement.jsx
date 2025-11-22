@@ -13,22 +13,22 @@ const devicesMock = [
     uptime: '12d 04:23'
   },
   {
-    id: 'LORA-C3',
-    type: 'LoRa Node',
-    batteryRemaining: 56,
-    batteryUsed: 44,
-    payloadsSentPerHour: 4,
-    avgConsumePerPayload: 1.6,
-    uptime: '08d 12:45'
+    id: 'RPI-B4',
+    type: 'Raspberry Pi',
+    batteryRemaining: 42,
+    batteryUsed: 58,
+    payloadsSentPerHour: 150,
+    avgConsumePerPayload: 1.2,
+    uptime: '03d 11:15'
   },
   {
-    id: 'STM32-D4',
-    type: 'STM32',
-    batteryRemaining: 94,
-    batteryUsed: 6,
-    payloadsSentPerHour: 2,
-    avgConsumePerPayload: 0.3,
-    uptime: '15d 08:12'
+    id: 'US-SENS-01',
+    type: 'Ultrasonic',
+    batteryRemaining: 96,
+    batteryUsed: 4,
+    payloadsSentPerHour: 60,
+    avgConsumePerPayload: 0.05,
+    uptime: '25d 09:45'
   }
 ];
 

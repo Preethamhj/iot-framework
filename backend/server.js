@@ -9,9 +9,9 @@ const reportRoutes = require("./routes/report");
 const fetchReports = require("./routes/fetchReports");
 const batteryRoutes = require("./routes/battery");
 const securotyiRoutes = require("./routes/secure");
+const  fileRoute  = require("./routes/file");
 // Middleware to parse JSON
 app.use(express.json());
-
 app.use(cors({
   origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE"],
@@ -35,7 +35,11 @@ app.use("/report", reportRoutes);
 app.use("/api", dataRoutes);
 app.use("/dashboard/security", securotyiRoutes);
 // Simple health check route
+app.use('/file', fileRoute);
 
+app.get("/health", (req, res) => {
+    res.json({ status: "Server is healthy" });
+});
 
 // Start server
 app.listen(PORT, () => {
