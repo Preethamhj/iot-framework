@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const dataRoutes = require("./routes/data");
 const reportRoutes = require("./routes/report");
 const fetchReports = require("./routes/fetchReports");
+const batteryRoutes = require("./routes/battery");
 // Middleware to parse JSON
 app.use(express.json());
 
@@ -26,6 +27,7 @@ mongoose.connect('mongodb+srv://hjpreetham1:Bfx3tEIMuSI2CxZ2@cluster0.3surfcb.mo
 // Log file path
 app.use("/api", fetchReports);
 app.use("/code", codeRouter);
+app.use("/battery-status", batteryRoutes);
 
 // Ensure log file exists
 app.use("/report", reportRoutes);
