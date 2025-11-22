@@ -6,6 +6,7 @@ const PORT = 3000;
 const mongoose = require("mongoose");
 const dataRoutes = require("./routes/data");
 const reportRoutes = require("./routes/report");
+const fetchReports = require("./routes/fetchReports");
 // Middleware to parse JSON
 app.use(express.json());
 
@@ -23,6 +24,7 @@ mongoose.connect('mongodb+srv://hjpreetham1:Bfx3tEIMuSI2CxZ2@cluster0.3surfcb.mo
     console.log("❌ MongoDB Connection Error:", err);
   });
 // Log file path
+app.use("/api", fetchReports);
 app.use("/code", codeRouter);
 
 // Ensure log file exists

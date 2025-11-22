@@ -3,29 +3,100 @@ import {
   LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Area, CartesianGrid, RadialBarChart, RadialBar
 } from 'recharts';
 import {
-  Cpu, Shield, TrendingUp, Thermometer, Droplets, Ruler, X
+  Cpu, Shield, TrendingUp, Thermometer, Droplets, Ruler, X, Battery
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
-const initialDevices = [
-  {
-    id: 'ESP32-A1',
-    type: 'ESP32',
-    status: 'active',
-    firmwareVersion: 'v2.1.3',
-    sensors: ['DHT22', 'Ultrasonic HC-SR04'],
-    capabilities: ['WiFi', 'Bluetooth', 'Deep Sleep', 'OTA Updates'],
+/* ------------------- DATA MAPPING HELPER FUNCTIONS ------------------- */
+
+// Function to safely extract a BSON-like number ($numberDouble, $numberInt)
+const extractNumber = (field) => {
+  if (typeof field === 'number') return field;
+  if (typeof field === 'object' && field !== null) {
+    if (field.$numberDouble !== undefined) return parseFloat(field.$numberDouble);
+    if (field.$numberInt !== undefined) return parseInt(field.$numberInt, 10);
+  }
+  return 0; // Default or error value
+};
+
+// Function to convert seconds to a human-readable 'Xd Yh' string
+const formatUptime = (totalSeconds) => {
+  if (typeof totalSeconds !== 'number' || totalSeconds < 0) return '0d 0h';
+  const SECONDS_IN_DAY = 86400;
+  const SECONDS_IN_HOUR = 3600;
+
+  const days = Math.floor(totalSeconds / SECONDS_IN_DAY);
+  const remainingSeconds = totalSeconds % SECONDS_IN_DAY;
+  const hours = Math.floor(remainingSeconds / SECONDS_IN_HOUR);
+
+  return `${days}d ${hours}h`;
+};
+
+// Log entry example based on your provided data
+const sampleLogEntry = {
+  "_id": { "$oid": "6920eb92d72497daa7f018fd" },
+  "digitalTwin": { "deviceId": "ESP32-DEVKIT-001", "deviceType": "IoT Sensor Node", "hardwareSpecs": "ESP32-WROOM-32, 4MB flash, 320KB RAM", "firmware": "v1.0.0", "sensors": "DHT22, HC-SR04, LDR", "lastOTA": "1970-01-01T00:00:00Z" },
+  "telemetry": { "temperature": { "$numberDouble": "22.95" }, "humidity": { "$numberInt": "81" }, "distance": { "$numberDouble": "30.287" }, "light": { "$numberInt": "0" }, "batteryPercentage": { "$numberDouble": "80.45" }, "uptimeSeconds": { "$numberInt": "10" }, "lastContactTime": "1970-01-01T00:00:10Z" },
+  "battery": { "connectCount": { "$numberInt": "8" }, "sendCount": { "$numberInt": "872" }, "sendIntervalSec": { "$numberInt": "5" }, "firmwareUpdateCount": { "$numberInt": "0" }, "payloadSizeBytes": { "$numberInt": "801" }, "batteryConsumedThisPayload": { "$numberInt": "0" }, "failedTransmissions": { "$numberInt": "0" }, "retryCount": { "$numberInt": "0" }, "wifiRSSI": { "$numberInt": "0" } },
+  "behaviour": { "resetCount": { "$numberInt": "0" }, "connectionPattern": "bluetooth" },
+  "anomaly": { "sensorJump": false, "batterySpike": false, "tampering": false },
+  "security": { "currentBattery": { "$numberDouble": "80.45" }, "isAnomalyDetected": false },
+  "cerberus_analysis": { "decision": "BALANCED", "reasoning": "Trigger: System Nominal", "metrics": { "anomaly_score": { "$numberInt": "1" }, "battery_prediction_hours": { "$numberInt": "16090" } }, "processed_at": "2025-11-22T04:15:37.848624" },
+  "receivedAt": { "$date": { "$numberLong": "1763765138394" } }
+};
+
+// Function to map the DB log entry to the React Device Schema
+function mapLogToDevice(logEntry) {
+  const temp = extractNumber(logEntry.telemetry.temperature);
+  const humidity = extractNumber(logEntry.telemetry.humidity);
+  const distance = extractNumber(logEntry.telemetry.distance);
+  const batteryPct = extractNumber(logEntry.telemetry.batteryPercentage);
+  const uptimeSec = extractNumber(logEntry.telemetry.uptimeSeconds);
+  const anomalyScore = extractNumber(logEntry.cerberus_analysis?.metrics?.anomaly_score);
+
+  // Derive status: 'warning' if any anomaly detected or decision is not BALANCED
+  const decision = logEntry.cerberus_analysis?.decision || 'BALANCED';
+  const isAnomaly = logEntry.anomaly?.sensorJump || logEntry.anomaly?.batterySpike || logEntry.anomaly?.tampering || logEntry.security?.isAnomalyDetected || anomalyScore > 5; // Assuming score > 5 is an anomaly threshold
+
+  const status = isAnomaly || decision.toUpperCase() !== 'BALANCED'
+    ? 'warning'
+    : 'active';
+
+  // Calculate Health (e.g., 100 - (Anomaly Score * Scaling Factor))
+  const healthScore = Math.max(0, 100 - Math.min(10, anomalyScore) * 5); // Simple inverse relationship
+
+  return {
+    id: logEntry.digitalTwin.deviceId,
+    type: logEntry.digitalTwin.deviceType,
+    status: status,
+    firmwareVersion: logEntry.digitalTwin.firmware,
+    sensors: logEntry.digitalTwin.sensors ? logEntry.digitalTwin.sensors.split(',').map(s => s.trim()) : [],
+    capabilities: logEntry.digitalTwin.hardwareSpecs.split(',').map(s => s.trim()), // Using specs as capabilities for display
     telemetry: {
-      temperature: 28.4,
-      humidity: 65,
-      distance: 102.5,
-      batteryRemaining: 87,
-      batteryUsed: 13,
-      uptime: '12d 4h',
-      lastContact: '2s ago'
+      temperature: parseFloat(temp.toFixed(1)),
+      humidity: Math.round(humidity),
+      distance: parseFloat(distance.toFixed(1)),
+      batteryRemaining: Math.round(batteryPct),
+      batteryUsed: 100 - Math.round(batteryPct),
+      uptime: formatUptime(uptimeSec),
+      lastContact: 'now', // Placeholder: You'd calculate relative time ('2s ago') here
     },
-    gateway: { mode: 'Balanced', securityLevel: 'Medium', transmissionFreq: '10s', lastOTA: '2024-01-15' }
-  },
+    gateway: {
+      mode: decision.charAt(0).toUpperCase() + decision.slice(1).toLowerCase(), // e.g., 'BALANCED' -> 'Balanced'
+      securityLevel: decision.toUpperCase() === 'SECURITY PRIORITY' ? 'High' : (decision.toUpperCase() === 'BALANCED' ? 'Medium' : 'Low'),
+      transmissionFreq: `${extractNumber(logEntry.battery.sendIntervalSec)}s`,
+      lastOTA: logEntry.digitalTwin.lastOTA?.split('T')[0] || 'N/A',
+    },
+    healthScore: Math.round(healthScore),
+    anomalyScore: anomalyScore,
+  };
+}
+
+/* ------------------- INITIAL STATE SETUP ------------------- */
+
+const initialDevices = [
+  mapLogToDevice(sampleLogEntry), // Map the first device from the DB log
+  // Keep the original second device structure for comparison, or map another log
   {
     id: 'LORA-C3',
     type: 'LoRa Node',
@@ -34,9 +105,12 @@ const initialDevices = [
     sensors: ['BME280', 'LDR'],
     capabilities: ['LoRaWAN', 'Low Power', 'Remote Wake'],
     telemetry: { temperature: 67.2, humidity: 45, distance: 0, batteryRemaining: 56, batteryUsed: 44, uptime: '8d 12h', lastContact: '1s ago' },
-    gateway: { mode: 'Security Priority', securityLevel: 'High', transmissionFreq: '5s', lastOTA: '2024-01-10' }
+    gateway: { mode: 'Security Priority', securityLevel: 'High', transmissionFreq: '5s', lastOTA: '2024-01-10' },
+    healthScore: 56,
+    anomalyScore: 8,
   }
 ];
+
 
 export default function Digitaltwinmonitor() {
   const { isDarkMode } = useTheme();
@@ -55,6 +129,7 @@ export default function Digitaltwinmonitor() {
     if (!selectedDevice && devices.length) setSelectedDevice(devices[0]);
   }, [devices, selectedDevice]);
 
+  // Telemetry series generation (uses selectedDevice's current temp/humidity as baseline)
   const series = useMemo(() => {
     const s = [];
     for (let i = 0; i < 24; i++) {
@@ -74,6 +149,11 @@ export default function Digitaltwinmonitor() {
     setSelectedDevice(device);
     setDrawerOpen(false);
   }
+
+  const selectedHealthScore = selectedDevice?.healthScore ?? 92;
+  const healthColor = selectedHealthScore > 75 ? '#34D399' : selectedHealthScore > 50 ? '#FBBF24' : '#F87171';
+  const anomalyText = selectedDevice?.anomalyScore > 0 ? `Anomaly Score: ${selectedDevice?.anomalyScore}` : 'System Nominal';
+  const anomalyTextColor = selectedDevice?.anomalyScore > 0 ? '#F87171' : '#34D399';
 
   return (
     <div
@@ -127,8 +207,8 @@ export default function Digitaltwinmonitor() {
                   padding: '10px 18px',
                   borderRadius: 999,
                   border: selected ? '1px solid rgba(52,211,153,0.3)' : '1px solid rgba(255,255,255,0.06)',
-                  background: selected 
-                    ? 'linear-gradient(90deg, rgba(52,211,153,0.15), rgba(14,165,233,0.08))' 
+                  background: selected
+                    ? 'linear-gradient(90deg, rgba(52,211,153,0.15), rgba(14,165,233,0.08))'
                     : isDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(255,255,255,0.8)',
                   backdropFilter: 'blur(6px)',
                   color: isDarkMode ? '#fff' : '#09203f',
@@ -195,7 +275,7 @@ export default function Digitaltwinmonitor() {
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={series}>
                   <defs>
-                    <linearGradient id="humGrad" x1="0" y1="0" x2="0" y2="1">
+                    <linearGradient id="humGrad" x1="0" y1="0" x2="0" x2="1">
                       <stop offset="0%" stopColor={isDarkMode ? '#7DD3FC' : '#0284c7'} stopOpacity={0.9} />
                       <stop offset="100%" stopColor={isDarkMode ? '#7DD3FC' : '#0284c7'} stopOpacity={0.08} />
                     </linearGradient>
@@ -214,6 +294,7 @@ export default function Digitaltwinmonitor() {
               <MetricCard isDark={isDarkMode} label="Temp" value={`${selectedDevice?.telemetry?.temperature}°C`} icon={<Thermometer />} />
               <MetricCard isDark={isDarkMode} label="Humidity" value={`${selectedDevice?.telemetry?.humidity}%`} icon={<Droplets />} />
               <MetricCard isDark={isDarkMode} label="Distance" value={`${selectedDevice?.telemetry?.distance} cm`} icon={<Ruler />} />
+              <MetricCard isDark={isDarkMode} label="Battery" value={`${selectedDevice?.telemetry?.batteryRemaining}%`} icon={<Battery />} />
             </div>
           </div>
 
@@ -230,25 +311,23 @@ export default function Digitaltwinmonitor() {
             <div style={{ marginBottom: 16 }}>
               <InfoRow label="Security Level" value={selectedDevice?.gateway?.securityLevel} isDark={isDarkMode} />
               <InfoRow label="Frequency" value={selectedDevice?.gateway?.transmissionFreq} valueRight isDark={isDarkMode} />
+              <InfoRow label="Last OTA" value={selectedDevice?.gateway?.lastOTA} valueRight isDark={isDarkMode} />
             </div>
 
+            {/* Health/Anomaly Radial Chart (using the new healthScore) */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: 12 }}>
               <div style={{ width: 180, height: 180 }}>
                 <ResponsiveContainer width="100%" height="100%">
-                  <RadialBarChart cx="50%" cy="50%" innerRadius="60%" outerRadius="100%" data={[{ name: 'health', value: 92, fill: '#34D399' }]} startAngle={90} endAngle={-270}>
+                  <RadialBarChart cx="50%" cy="50%" innerRadius="60%" outerRadius="100%" data={[{ name: 'health', value: selectedHealthScore, fill: healthColor }]} startAngle={90} endAngle={-270}>
                     <RadialBar minAngle={15} background clockWise dataKey="value" cornerRadius={10} />
                   </RadialBarChart>
                 </ResponsiveContainer>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <div style={{ width: 16, height: 10, background: '#34D399', borderRadius: 2 }} />
-                <div style={{ color: isDarkMode ? '#34D399' : '#059669', fontWeight: 700 }}>health</div>
-              </div>
-
               <div style={{ textAlign: 'center', marginTop: 4 }}>
-                <div style={{ fontWeight: 800, color: isDarkMode ? '#34D399' : '#059669', fontSize: 20 }}>92%</div>
+                <div style={{ fontWeight: 800, color: healthColor, fontSize: 20 }}>{selectedHealthScore}%</div>
                 <div style={{ color: isDarkMode ? 'rgba(255,255,255,0.7)' : 'rgba(30,41,59,0.6)', fontSize: 13 }}>Device Health</div>
+                <div style={{ fontWeight: 600, color: anomalyTextColor, fontSize: 14, marginTop: 4 }}>{anomalyText}</div>
               </div>
             </div>
           </div>
@@ -279,8 +358,8 @@ export default function Digitaltwinmonitor() {
           bottom: 0,
           width: isMobile ? '100%' : 420,
           maxWidth: '100%',
-          background: isDarkMode 
-            ? 'linear-gradient(180deg, #0f1419, #0a0d12)' 
+          background: isDarkMode
+            ? 'linear-gradient(180deg, #0f1419, #0a0d12)'
             : 'linear-gradient(180deg, #ffffff, #f8fafc)',
           boxShadow: '-10px 0 40px rgba(0,0,0,0.5)',
           zIndex: 1000,
@@ -312,7 +391,7 @@ export default function Digitaltwinmonitor() {
           </button>
         </div>
 
-        <AddDeviceForm onAdd={handleAddDevice} onCancel={() => setDrawerOpen(false)} isDark={isDarkMode} />
+        <AddDeviceForm onAdd={(d) => handleAddDevice({...d, healthScore: 100, anomalyScore: 0})} onCancel={() => setDrawerOpen(false)} isDark={isDarkMode} />
       </div>
 
       <style>{`
@@ -329,7 +408,7 @@ export default function Digitaltwinmonitor() {
   );
 }
 
-/* -------- AddDeviceForm -------- */
+/* -------- AddDeviceForm (Unmodified) -------- */
 function AddDeviceForm({ onAdd, onCancel, isDark }) {
   const [form, setForm] = useState({
     id: '',
@@ -498,7 +577,7 @@ function AddDeviceForm({ onAdd, onCancel, isDark }) {
   );
 }
 
-/* ---------- Helpers ---------- */
+/* ---------- Helpers (Unmodified) ---------- */
 
 function glassCardStyle(isDark) {
   return {
