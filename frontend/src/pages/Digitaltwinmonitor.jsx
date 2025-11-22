@@ -7,13 +7,13 @@ import {
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
-// Import the new Sketchfab viewer
+// Import the smart Sketchfab viewer
 import SketchfabViewer from '../components/SketchFabViewer';
 
 const initialDevices = [
   {
     id: 'ESP32-A1',
-    type: 'ESP32',
+    type: 'ESP32', // Matches 'ESP32' key in SketchFabViewer
     status: 'active',
     firmwareVersion: 'v2.1.3',
     sensors: ['DHT22', 'Ultrasonic HC-SR04'],
@@ -30,14 +30,14 @@ const initialDevices = [
     gateway: { mode: 'Balanced', securityLevel: 'Medium', transmissionFreq: '10s', lastOTA: '2024-01-15' }
   },
   {
-    id: 'LORA-C3',
-    type: 'LoRa Node',
-    status: 'warning',
-    firmwareVersion: 'v1.9.8',
-    sensors: ['BME280', 'LDR'],
-    capabilities: ['LoRaWAN', 'Low Power', 'Remote Wake'],
-    telemetry: { temperature: 67.2, humidity: 45, distance: 0, batteryRemaining: 56, batteryUsed: 44, uptime: '8d 12h', lastContact: '1s ago' },
-    gateway: { mode: 'Security Priority', securityLevel: 'High', transmissionFreq: '5s', lastOTA: '2024-01-10' }
+    id: 'US-SENS-01',
+    type: 'Ultrasonic', // Matches 'Ultrasonic' key in SketchFabViewer
+    status: 'active',
+    firmwareVersion: 'v1.2.0',
+    sensors: ['HC-SR04'],
+    capabilities: ['Proximity', 'Obstacle Avoidance', 'Precision Measure'],
+    telemetry: { temperature: 26.1, humidity: 40, distance: 15.4, batteryRemaining: 92, batteryUsed: 8, uptime: '3d 2h', lastContact: '500ms ago' },
+    gateway: { mode: 'Real-time', securityLevel: 'Low', transmissionFreq: '0.5s', lastOTA: '2024-02-25' }
   }
 ];
 
@@ -161,21 +161,22 @@ export default function Digitaltwinmonitor() {
         `}</style>
         <div className="dt-grid" style={{ display: 'grid', gap: 20 }}>
           
-          {/* 3D Viewer Card - USING SKETCHFAB */}
+          {/* 3D Viewer Card - USING SMART SKETCHFAB VIEWER */}
           <div className="span-2" style={{ ...glassCardStyle(isDarkMode), overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
               <div style={glassIconStyle(isDarkMode)}><Box size={20} /></div>
               <div>
                 <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>Live Digital Twin</h3>
                 <div style={{ color: isDarkMode ? 'rgba(255,255,255,0.7)' : 'rgba(30,41,59,0.6)', fontSize: 13 }}>
-                  Interactive 3D View • {selectedDevice?.id}
+                  Interactive 3D View • {selectedDevice?.type}
                 </div>
               </div>
             </div>
             
             {/* Container for the viewer */}
             <div style={{ flex: 1, minHeight: 400, background: isDarkMode ? 'rgba(0,0,0,0.2)' : '#f1f5f9', borderRadius: 12, overflow: 'hidden' }}>
-              <SketchfabViewer />
+              {/* Pass the selected device type (ESP32 or Ultrasonic) to the viewer */}
+              <SketchfabViewer deviceType={selectedDevice?.type} />
             </div>
           </div>
 
@@ -202,7 +203,7 @@ export default function Digitaltwinmonitor() {
             </div>
           </div>
 
-          {/* Live Telemetry Card - Spans 2 cols for better chart width on desktop */}
+          {/* Live Telemetry Card */}
           <div className="span-2" style={glassCardStyle(isDarkMode)}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
               <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
@@ -346,10 +347,10 @@ export default function Digitaltwinmonitor() {
           <div style={{ marginBottom: 24 }}>
             <label style={{ display: 'block', marginBottom: 8, fontWeight: 600, fontSize: 14 }}>Type</label>
             <select name="type" style={inputStyle(isDarkMode)}>
-              <option>ESP32</option>
-              <option>LoRa Node</option>
-              <option>STM32</option>
-              <option>Raspberry Pi</option>
+              <option value="ESP32">ESP32</option>
+              <option value="Ultrasonic">Ultrasonic</option>
+              <option value="Raspberry Pi">Raspberry Pi</option>
+              <option value="STM32">STM32</option>
             </select>
           </div>
           <button type="submit" style={{
