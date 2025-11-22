@@ -344,7 +344,7 @@ export default function Digitaltwinmonitor() {
                             <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={series}>
                                     <defs>
-                                        <linearGradient id="humGrad" x1="0" y1="0" x2="0" x2="1">
+                                        <linearGradient id="humGrad" x1="0" y1="0" x2="0" y2="1">
                                             <stop offset="0%" stopColor={isDarkMode ? '#7DD3FC' : '#0284c7'} stopOpacity={0.9} />
                                             <stop offset="100%" stopColor={isDarkMode ? '#7DD3FC' : '#0284c7'} stopOpacity={0.08} />
                                         </linearGradient>
