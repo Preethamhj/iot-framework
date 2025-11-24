@@ -3,9 +3,22 @@ const TelemetryReport = require("../models/TelemetryReport");
 
 const router = express.Router();
 
+// Utility to extract numbers safely from MongoDB extended formats
+const extractNumber = (field) => {
+  if (typeof field === "number") return field;
+  if (typeof field === "string") return Number(field);
+
+  if (field && typeof field === "object") {
+    if (field.$numberDouble !== undefined) return parseFloat(field.$numberDouble);
+    if (field.$numberInt !== undefined) return parseInt(field.$numberInt, 10);
+    if (field.$numberLong !== undefined) return parseInt(field.$numberLong, 10);
+  }
+  return 0;
+};
+
 router.get("/", async (req, res) => {
   try {
-    // Get last 10 latest telemetry reports (if multi-device)
+    // Fetch last 10 device records
     const records = await TelemetryReport.find()
       .sort({ _id: -1 })
       .limit(10)
@@ -15,23 +28,33 @@ router.get("/", async (req, res) => {
       return res.status(404).json({ message: "No telemetry records found" });
     }
 
-    // Convert DB records into Dashboard card format
+    // Transform DB documents into frontend-ready format
     const devices = records.map((doc) => {
       const tele = doc.telemetry || {};
-      const security = doc.security || {};
       const analysis = doc.cerberus_analysis || {};
+      const security = doc.security || {};
       const battery = doc.battery || {};
+      const twin = doc.digitalTwin || {};
 
       return {
-        id: doc.digitalTwin?.deviceId || "Unknown",
-        type: doc.digitalTwin?.deviceType || "IoT Device",
-        battery: tele.batteryPercentage || 0,
-        predictedBattery: analysis?.metrics?.battery_prediction_hours || 0,
-        anomalyScore: analysis?.metrics?.anomaly_score || 0,
-        payloadSize: battery?.payloadSizeBytes || 0,
-        rssi: battery?.wifiRSSI || -100,
-        uptime: tele?.uptimeSeconds
-          ? (tele.uptimeSeconds / 3600).toFixed(1) + "h"
+        // React requires unique keys -> send MongoDB _id
+        _id: doc._id?.toString(),
+
+        // Device Info
+        id: twin.deviceId || "Device",
+        type: twin.deviceType || "IoT Device",
+
+        // Numeric-safe values
+        battery: extractNumber(tele.batteryPercentage),
+        predictedBattery: extractNumber(analysis?.metrics?.battery_prediction_hours),
+        anomalyScore: extractNumber(analysis?.metrics?.anomaly_score),
+
+        // Additional metrics
+        payloadSize: extractNumber(battery.payloadSizeBytes),
+        rssi: extractNumber(battery.wifiRSSI),
+
+        uptime: tele.uptimeSeconds
+          ? (extractNumber(tele.uptimeSeconds) / 3600).toFixed(1) + "h"
           : "--",
       };
     });

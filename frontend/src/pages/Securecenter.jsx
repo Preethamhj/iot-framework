@@ -1,7 +1,7 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect } from "react";
 import axios from "axios";
-import { Shield, Lock, Zap, Clock } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { Shield, Lock, Zap, Clock } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 // -------------------------------------------------------
 // DECISION ENGINE
@@ -10,22 +10,15 @@ function getSecurityDecisions(device) {
     const { battery, predictedBattery, anomalyScore } = device;
 
     const dropSpeed = battery - predictedBattery;
-    const batteryTrend = dropSpeed > 0 ? 'Discharging' : 'Charging';
+    const batteryTrend = dropSpeed > 0 ? "Discharging" : "Charging";
 
     let encryptionLevel = 128;
-    if (anomalyScore > 0.7) {
-        encryptionLevel = 256;
-    } else if (battery > 90 || predictedBattery > 85) {
-        encryptionLevel = 256;
-    }
+    if (anomalyScore > 0.7) encryptionLevel = 256;
+    else if (battery > 90 || predictedBattery > 85) encryptionLevel = 256;
 
     let frequencyHz = 60;
-    if (anomalyScore > 0.5 || battery < 50) {
-        frequencyHz = 30;
-    }
-    if (battery < 20 || anomalyScore > 0.85) {
-        frequencyHz = 10;
-    }
+    if (anomalyScore > 0.5 || battery < 50) frequencyHz = 30;
+    if (battery < 20 || anomalyScore > 0.85) frequencyHz = 10;
 
     const updateIntervalSec = Math.round(1000 / frequencyHz) / 1000;
 
@@ -34,13 +27,17 @@ function getSecurityDecisions(device) {
         transmissionFrequency: `${frequencyHz}s`,
         updateInterval: `${updateIntervalSec} sec`,
         securityRisk:
-            anomalyScore > 0.7 ? "High" :
-            anomalyScore > 0.4 ? "Moderate" : "Low",
+            anomalyScore > 0.7
+                ? "High"
+                : anomalyScore > 0.4
+                ? "Moderate"
+                : "Low",
         batteryTrend,
-        dropSpeed: `${dropSpeed.toFixed(1)}% / 24h`
+        dropSpeed: `${dropSpeed.toFixed(1)}% / 24h`,
     };
 }
 
+// -------------------------------------------------------
 function getRiskColor(risk) {
     if (risk === "High") return { hex: "#f87171", twBg: "bg-red-500" };
     if (risk === "Moderate") return { hex: "#fbbf24", twBg: "bg-amber-500" };
@@ -54,15 +51,14 @@ export default function SecureCenter() {
     const { isDarkMode } = useTheme();
     const [devices, setDevices] = useState([]);
 
-    // Fetch Data From Backend
     useEffect(() => {
         async function loadSecurity() {
             try {
                 const res = await axios.get("http://localhost:3000/dashboard/security");
 
-                const enriched = res.data.devices.map(d => ({
+                const enriched = res.data.devices.map((d) => ({
                     ...d,
-                    ...getSecurityDecisions(d)
+                    ...getSecurityDecisions(d),
                 }));
 
                 setDevices(enriched);
@@ -77,7 +73,9 @@ export default function SecureCenter() {
     return (
         <div
             className={`min-h-screen transition-colors duration-300 p-6 ${
-                isDarkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-900"
+                isDarkMode
+                    ? "bg-gray-950 text-white"
+                    : "bg-gray-50 text-slate-900"
             }`}
         >
             <div className="max-w-7xl mx-auto">
@@ -90,24 +88,28 @@ export default function SecureCenter() {
                                     ? "linear-gradient(90deg, #10B981, #06B6D4)"
                                     : "linear-gradient(90deg, #059669, #0891b2)",
                                 WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent"
+                                WebkitTextFillColor: "transparent",
                             }}
                         >
                             🛡️ Security Control Center
                         </h1>
                     </div>
-                    <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
+                    <p
+                        className={`text-sm ${
+                            isDarkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
+                    >
                         Real-Time Security • Energy Optimization • Anomaly Defense
                     </p>
                 </header>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                    {devices.map((device, i) => (
+                    {devices.map((device, index) => (
                         <SecurityDeviceCard
-                            key={device.id}
+                            key={device._id || `${device.id}-${index}`}
                             device={device}
                             isDarkMode={isDarkMode}
-                            index={i}
+                            index={index}
                         />
                     ))}
                 </div>
@@ -117,7 +119,7 @@ export default function SecureCenter() {
 }
 
 // -------------------------------------------------------
-// DEVICE CARD COMPONENT
+// DEVICE CARD
 // -------------------------------------------------------
 const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
     const risk = device.securityRisk;
@@ -128,7 +130,7 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
             animationDelay: `${index * 100}ms`,
             border: isDarkMode
                 ? `1px solid ${risk === "High" ? color.hex : "rgb(55,65,81)"}`
-                : "1px solid rgb(229,231,235)"
+                : "1px solid rgb(229,231,235)",
         }),
         [isDarkMode, risk, color.hex, index]
     );
@@ -136,19 +138,20 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
     const chartData = [
         {
             label: "Security",
-            value: risk === "High" ? 100 : risk === "Moderate" ? 65 : 30,
-            color: color.hex
+            value:
+                risk === "High" ? 100 : risk === "Moderate" ? 65 : 30,
+            color: color.hex,
         },
         {
             label: "Battery Cost",
             value: Math.max(0, 100 - device.battery),
-            color: "#06B6D4"
+            color: "#06B6D4",
         },
         {
             label: "Anomaly",
             value: device.anomalyScore * 100,
-            color: "#FCD34D"
-        }
+            color: "#FCD34D",
+        },
     ];
 
     return (
@@ -161,8 +164,18 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
             {/* Header */}
             <div className="flex items-start justify-between mb-6 border-b pb-4">
                 <div className="flex items-center gap-3">
-                    <div className={`p-3 rounded-lg ${isDarkMode ? "bg-indigo-500/10" : "bg-indigo-50"}`}>
-                        <Shield className={`w-6 h-6 ${isDarkMode ? "text-indigo-400" : "text-indigo-600"}`} />
+                    <div
+                        className={`p-3 rounded-lg ${
+                            isDarkMode ? "bg-indigo-500/10" : "bg-indigo-50"
+                        }`}
+                    >
+                        <Shield
+                            className={`w-6 h-6 ${
+                                isDarkMode
+                                    ? "text-indigo-400"
+                                    : "text-indigo-600"
+                            }`}
+                        />
                     </div>
                     <div>
                         <div className="text-xl font-semibold">{device.id}</div>
@@ -185,20 +198,40 @@ const SecurityDeviceCard = ({ device, isDarkMode, index }) => {
                 </div>
             </div>
 
-            {/* Chart */}
-            <h3 className="text-base font-semibold mb-4">Trade-off Engine Metrics</h3>
+            {/* Trade-off Metrics */}
+            <h3 className="text-base font-semibold mb-4">
+                Trade-off Engine Metrics
+            </h3>
             <div className="grid grid-cols-3 gap-2 mb-6">
-                {chartData.map(item => (
-                    <TradeOffMetric key={item.label} data={item} isDarkMode={isDarkMode} />
+                {chartData.map((item) => (
+                    <TradeOffMetric
+                        key={item.label}
+                        data={item}
+                        isDarkMode={isDarkMode}
+                    />
                 ))}
             </div>
 
-            {/* Decisions */}
-            <h3 className="text-base font-semibold mb-4 border-t pt-4">Decision Outputs</h3>
+            {/* Decision Pills */}
+            <h3 className="text-base font-semibold mb-4 border-t pt-4">
+                Decision Outputs
+            </h3>
             <div className="grid grid-cols-3 gap-4 text-center">
-                <DecisionPill icon={Lock} label="Encryption" value={device.encryptionLevel} />
-                <DecisionPill icon={Clock} label="Frequency" value={device.transmissionFrequency} />
-                <DecisionPill icon={Zap} label="Interval" value={device.updateInterval} />
+                <DecisionPill
+                    icon={Lock}
+                    label="Encryption"
+                    value={device.encryptionLevel}
+                />
+                <DecisionPill
+                    icon={Clock}
+                    label="Frequency"
+                    value={device.transmissionFrequency}
+                />
+                <DecisionPill
+                    icon={Zap}
+                    label="Interval"
+                    value={device.updateInterval}
+                />
             </div>
         </div>
     );
